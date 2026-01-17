@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proxy Home</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,sans-serif;
+  background:linear-gradient(135deg,#e0f2fe,#fdf2f8);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  width:90%;
+  max-width:900px;
+}
+.card{
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,0.6);
+  border-radius:28px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+  cursor:pointer;
+  transition:transform .3s, box-shadow .3s;
+}
+.card:hover{
+  transform:translateY(-8px) scale(1.03);
+}
+.fade-out{
+  animation:meltOut .8s forwards;
+}
+@keyframes meltOut{
+  from{opacity:1;filter:blur(0);transform:scale(1)}
+  to{opacity:0;filter:blur(30px);transform:scale(1.1)}
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="root">
+  <div class="card" onclick="go('utopia.html')">
+    <h2>Utopia</h2>
+    <p>Proxy Links</p>
+  </div>
+
+  <div class="card" onclick="go('sennin.html')">
+    <h2>仙人Tube</h2>
+    <p>Proxy Links</p>
+  </div>
+
+  <div class="card" onclick="go('insute.html')">
+    <h2>インステ</h2>
+    <p>Proxy Links</p>
+  </div>
+</div>
+
+<script>
+function go(url){
+  document.getElementById('root').classList.add('fade-out');
+  setTimeout(()=>location.href=url,750);
+}
+</script>
+
+</body>
+</html>
