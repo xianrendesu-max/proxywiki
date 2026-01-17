@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仙人Tube Proxy</title>
+<style>
+body{
+  margin:0;
+  font-family:system-ui;
+  background:linear-gradient(135deg,#fef9c3,#e0f2fe);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.glass{
+  backdrop-filter:blur(22px);
+  background:rgba(255,255,255,.65);
+  border-radius:30px;
+  padding:40px;
+  width:90%;
+  max-width:700px;
+  box-shadow:0 30px 60px rgba(0,0,0,.18);
+  animation:meltIn .8s;
+}
+@keyframes meltIn{
+  from{opacity:0;filter:blur(30px);transform:scale(1.1)}
+  to{opacity:1;filter:blur(0);transform:scale(1)}
+}
+a{
+  display:block;
+  margin:12px 0;
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<div class="glass">
+  <h1>仙人Tube Proxy Links</h1>
+
+  <a href="https://hide.me/en/proxy" target="_blank">hide.me</a>
+  <a href="https://www.4everproxy.com/" target="_blank">4everproxy</a>
+
+  <a href="home.html">← Home</a>
+</div>
+
+</body>
+</html>
