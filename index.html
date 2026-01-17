@@ -31,7 +31,7 @@ body{
   text-align:center;
   box-shadow:0 25px 50px rgba(0,0,0,0.15);
   cursor:pointer;
-  transition:transform .3s, box-shadow .3s;
+  transition:transform .3s;
 }
 .card:hover{
   transform:translateY(-8px) scale(1.03);
@@ -48,26 +48,33 @@ body{
 <body>
 
 <div class="container" id="root">
+
   <div class="card" onclick="go('utopia.html')">
+    
     <h2>Utopia</h2>
     <p>Proxy Links</p>
   </div>
 
   <div class="card" onclick="go('sennin.html')">
+    
     <h2>仙人Tube</h2>
     <p>Proxy Links</p>
   </div>
 
   <div class="card" onclick="go('insute.html')">
+    
     <h2>インステ</h2>
     <p>Proxy Links</p>
   </div>
+
 </div>
 
 <script>
 function go(url){
   document.getElementById('root').classList.add('fade-out');
-  setTimeout(()=>location.href=url,750);
+  setTimeout(function(){
+    location.href = url;
+  },750);
 }
 </script>
 
