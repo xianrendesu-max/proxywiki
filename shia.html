@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>しあtube Proxy</title>
+
+<style>
+:root{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --sub:#475569;
+  --accent:#22c55e;
+  --border:#e5e7eb;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:24px;
+  color:var(--text);
+  animation:bgFade .6s ease;
+}
+
+@keyframes bgFade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.container{
+  width:100%;
+  max-width:720px;
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  padding:28px;
+  animation:containerIn .7s cubic-bezier(.22,1,.36,1);
+}
+
+@keyframes containerIn{
+  from{opacity:0;transform:translateY(30px) scale(.97)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+h1{
+  margin:0 0 8px;
+  font-size:1.6rem;
+  animation:fadeUp .6s ease .1s both;
+}
+
+.description{
+  font-size:.95rem;
+  color:var(--sub);
+  line-height:1.6;
+  margin-bottom:24px;
+  animation:fadeUp .6s ease .2s both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.list a{
+  display:block;
+  padding:14px 16px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+  background:#fff;
+  opacity:0;
+  transform:translateY(10px);
+  animation:linkIn .5s ease forwards;
+  transition:transform .15s, box-shadow .15s, background .15s;
+}
+
+.list a:nth-child(1){animation-delay:.05s}
+.list a:nth-child(2){animation-delay:.1s}
+.list a:nth-child(3){animation-delay:.15s}
+.list a:nth-child(4){animation-delay:.2s}
+.list a:nth-child(5){animation-delay:.25s}
+
+@keyframes linkIn{
+  to{opacity:1;transform:translateY(0)}
+}
+
+.list a:hover{
+  background:#f0fdf4;
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,.08);
+}
+
+.footer{
+  margin-top:26px;
+  text-align:center;
+  animation:fadeUp .6s ease .6s both;
+}
+
+.footer a{
+  color:var(--sub);
+  text-decoration:none;
+  font-size:.9rem;
+}
+
+.footer a:hover{ color:var(--accent); }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>しあtube Proxy</h1>
+
+  <div class="description">
+    しあtubeのリンク集です。  
+    しあさんが作ったサイトです。
+  </div>
+
+  <div class="list">
+    <a href="#" target="_blank">Proxy 01</a>
+    <a href="#" target="_blank">Proxy 02</a>
+    <a href="#" target="_blank">Proxy 03</a>
+    <a href="#" target="_blank">Proxy 04</a>
+    <a href="#" target="_blank">Proxy 05</a>
+  </div>
+
+  <div class="footer">
+    <a href="index.html">← Home</a>
+  </div>
+</div>
+
+</body>
+</html>
